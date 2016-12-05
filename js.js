@@ -14,8 +14,29 @@
 //
 // document.getElementById("coloredReindeer").innerHTML = hohohoElement;
 
+var products = new XMLHttpRequest();
+
+var prods = products.json.parse(e.target.responseText)
 
 
+var categories = new XMLHttpRequest();
+
+var cats = categories.json.parse(e.target.responseText)
+
+
+
+
+
+products.addEventListener("load", func);
+
+products.open("GET","products.json");
+products.send();
+
+
+categories.addEventListener("load", func);
+
+categories.open("GET","categories.json");
+categories.send();
 
 // Your job is to build a web page that lists all of the products,
 // the name of the department it's in, and the price.
